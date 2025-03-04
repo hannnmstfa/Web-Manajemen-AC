@@ -6,7 +6,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 <h4>User Login</h4>
-<table>
+<table style="border: none">
     <tr>
         <td>Username</td>
         <td>:</td>
