@@ -1,0 +1,284 @@
+* {
+    /* border: 1px solid red; */
+}
+
+body{
+    /* font-family: sans-serif; */
+}
+
+.main-content {
+    max-height: 100vh;
+    margin-left: 250px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.main-content.expanded {
+    margin-left: 0;
+}
+
+.custom-th th {
+    background-color: #cfe2ff !important;
+}
+
+/* Sidebar utama */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(60, 182, 239);
+    overflow-y: auto;
+    /* z-index: 1000; */
+    padding: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Bagian atas sidebar (header atau title) */
+.sidebar-header {
+    background-color: #0288d1;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 2px solid #4fc3f7;
+    letter-spacing: 0.5px;
+}
+
+/* Menu navigasi */
+.nav {
+    padding: 0;
+    margin: 0;
+}
+
+/* Link menu */
+.nav .nav-link {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+/* Ikon dropdown untuk menu yang bisa diklik */
+.nav-link[data-bs-toggle="collapse"].collapsed::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.nav-link[data-bs-toggle="collapse"]::after {
+    position: absolute;
+    margin: 10px;
+    right: 0;
+    top: 0;
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+/* Ikon di dalam link */
+.nav .nav-link i {
+    color: black;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+/* Efek aktif */
+.item-active {
+    background-color: #b3e5fc;
+    border-radius: 5px;
+}
+
+.link-active {
+    background-color: #4dd0e1;
+    border-radius: 5px;
+    color: #004d40;
+}
+
+/* Hover pada item dropdown */
+.collapse .nav-link:hover,
+.nav-item:hover .nav-link,
+.nav-item.show .nav-link {
+    background-color: #4dd0e1;
+    border-radius: 5px;
+    color: #004d40;
+}
+
+/* Dropdown yang terbuka langsung memiliki hover */
+.nav-item.show {
+    background-color: #b3e5fc;
+    border-radius: 5px;
+}
+
+/* Pembatas dropdown dan menu utama */
+.nav-item {
+    padding: 0 10px;
+}
+
+/* Hover efek transisi */
+.nav-item:hover {
+    background-color: #b3e5fc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/*nav-custom*/
+.nav-custom {
+    background-color: #3cb6ef;
+    color: white;
+    height: 8vh;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-item {
+    color: #495057;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #d1ecf1;
+    color: #004d40;
+}
+
+.sidebar-toggle {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sidebar-toggle:hover {
+    background-color: #e3f2fd;
+}
+
+/* Body & Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7fafc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Profil Styling */
+.profile-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading & Text Styling */
+.profile-section__header {
+    text-align: center;
+}
+
+.profile-section__header h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.profile-section__header p {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* Input Fields Styling */
+.profile-section__input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.profile-section__input:focus {
+    border-color: #3182ce;
+    outline: none;
+    background-color: #f0f9ff;
+}
+
+/* Password Input Styling */
+.profile-section__input--password {
+    border: 1px solid #e2e8f0;
+    background-color: #f7fafc;
+}
+
+.profile-section__input--password:focus {
+    border-color: #3182ce;
+}
+
+/* Label Styling */
+.profile-section__label {
+    font-size: 0.875rem;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+/* Form Layout */
+.profile-section__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Submit Button Styling */
+.profile-section__submit {
+    padding: 12px 20px;
+    background-color: #3182ce;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-section__submit:hover {
+    background-color: #1a6bbd;
+}
+
+/* Custom Button */
+.profile-section__btn {
+    background-color: #0015ff;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.profile-section__btn:hover {
+    background-color: #0031e6;
+}
+
+/* Error Message Styling */
+.profile-section__error {
+    color: #e53e3e;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
